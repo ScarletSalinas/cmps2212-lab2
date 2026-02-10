@@ -34,7 +34,34 @@
     </div>
     
     <script defer>
-        // JavaScript will go here
+        // Selecting title element
+        const title = document.getElementById("title");
+
+        if(!title) {
+            console.error("Title element not found.");
+        } else {
+            console.log("Title: ", title);
+        }
+
+        // Selecting first paragraph with class info
+        const paragraph = document.querySelector(".info");
+
+        if(!paragraph) {
+            console.error("Paragraph element with class 'info' not found.");
+        } else {
+            console.log("Paragraph: ", paragraph);
+        }
+
+        // Selecting all buttons with class "action-btn"
+        const button = document.querySelectorAll(".action-btn");
+
+        if (button.length === 0) {
+            console.error("No elements with class 'action-btn' found.");
+        } else {
+            console.log("Found: ", button);
+        }
+
+
     </script>
 </body>
 </html>
