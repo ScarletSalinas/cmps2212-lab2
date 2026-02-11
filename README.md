@@ -21,7 +21,7 @@ It focusses on attaching event listeners, updating element content, and using br
 - [W3Schools](https://www.w3schools.com/js)
 
 # Link to video demo
-[Watch demo here](https://youtu.be/)
+[Watch demo here](https://youtu.be/YVMw10OcgJI)
  
 
 
