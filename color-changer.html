@@ -32,7 +32,6 @@
             padding: 10px 20px;
         }
        
-
     </style>
 </head>
 <body>
@@ -53,7 +52,65 @@
     </div>
     
     <script defer>
-        // JavaScript will go here
+        // Selecting all 3 boxes
+        const boxes = document.querySelectorAll(".box");
+        const redBtn = document.getElementById("btn-red");
+        const blueBtn = document.getElementById("btn-blue");
+        const greenBtn = document.getElementById("btn-green");
+        const resetBtn = document.getElementById("reset-btn");
+
+        // Check if any boxes were found
+        if(boxes.length === 0) {
+            console.error("No elements with class 'box' found");
+        }
+
+        if(!redBtn) {
+            console.error("Make Red button not found");
+        }
+
+         if(!blueBtn) {
+            console.error("Make Blue button not found");
+        }
+
+         if(!greenBtn) {
+            console.error("Make Red button not found");
+        }
+
+         if(!resetBtn) {
+            console.error("Reset button not found");
+        }
+
+        // Function to change all boxes color
+        function changeBoxColor(color) {
+            boxes.forEach(box => {
+                box.style.backgroundColor = color;
+            });
+        }
+
+        // Add event listeners for each button only if they exist
+        if(redBtn && boxes.length > 0) {
+            redBtn.addEventListener("click", () => {
+                changeBoxColor("#70161E");
+            });
+        }
+
+        if(blueBtn && boxes.length > 0) {
+            blueBtn.addEventListener("click", () => {
+                changeBoxColor("#1C3144");
+            });
+        }
+
+        if(greenBtn && boxes.length > 0) {
+            greenBtn.addEventListener("click", () => {
+                changeBoxColor("#149911");
+            });
+        }
+
+        if(resetBtn && boxes.length > 0) {
+            resetBtn.addEventListener("click", () => {
+                changeBoxColor("lightgray");
+            });
+        }
     </script>
 </body>
 </html>
