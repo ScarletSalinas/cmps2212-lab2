@@ -55,10 +55,54 @@
 
     <button id="highlight-btn">Highlight All</button>
     <button id="clear-btn">Clear Highlights</button>
-    <button class="toggle-btn">Toggle First Paragraph</button>
+    <button id="toggle-btn">Toggle First Paragraph</button>
 
     <script defer>
+        
+        const paragraphs = document.querySelectorAll(".paragraph"); // Selecting all paragraphs
+        const firstParagraph = document.querySelector(".paragraph"); // Selecting 1st paragraph only
 
+        // Select all btns
+        const highlightBtn = document.getElementById("highlight-btn");
+        const clearBtn = document.getElementById("clear-btn");
+        const toggleBtn = document.getElementById("toggle-btn");
+
+        // error checking
+        if(paragraphs.length === 0) {console.error("No paragraphs found with class 'paragraph'");}
+
+        if(!firstParagraph) {console.error("First paragraph not found");}
+
+        if(!highlightBtn) {console.error("Highlight button not found");}
+        
+        if(!clearBtn) { console.error("Clear button not found");}
+        
+        if(!toggleBtn) {console.error("Toggle button not found");}
+
+        // highlight all paragraphs
+        if(highlightBtn && paragraphs.length > 0) {
+            highlightBtn.addEventListener("click", () => {
+                paragraphs.forEach(p => {
+                    p.classList.add("highlight");
+                });
+            });      
+        }
+
+        // clear all highlights
+        if(clearBtn && paragraphs.length > 0) {
+            clearBtn.addEventListener("click", () => {
+                paragraphs.forEach(p => {
+                    p.classList.remove("highlight");
+                });
+            });      
+        }
+
+        // toggle 1st paragraph
+        if(toggleBtn && firstParagraph) {
+            toggleBtn.addEventListener("click", () => {
+                firstParagraph.classList.toggle("highlight");
+            });
+        }
+        
     </script>
 </body>
 </html>

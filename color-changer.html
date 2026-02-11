@@ -60,25 +60,15 @@
         const resetBtn = document.getElementById("reset-btn");
 
         // Check if any boxes were found
-        if(boxes.length === 0) {
-            console.error("No elements with class 'box' found");
-        }
+        if(boxes.length === 0) {console.error("No elements with class 'box' found");}
 
-        if(!redBtn) {
-            console.error("Make Red button not found");
-        }
+        if(!redBtn) {console.error("Make Red button not found");}
 
-         if(!blueBtn) {
-            console.error("Make Blue button not found");
-        }
+        if(!blueBtn) {console.error("Make Blue button not found");}
 
-         if(!greenBtn) {
-            console.error("Make Red button not found");
-        }
+        if(!greenBtn) { console.error("Make Red button not found");}
 
-         if(!resetBtn) {
-            console.error("Reset button not found");
-        }
+        if(!resetBtn) {console.error("Reset button not found");}
 
         // Function to change all boxes color
         function changeBoxColor(color) {
